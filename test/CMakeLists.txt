@@ -1,6 +1,6 @@
 project(TestCases)
 
-add_executable(Tests ${PROJECT_NAME})
+add_executable(${PROJECT_NAME} test.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/src)
 

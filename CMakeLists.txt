@@ -6,11 +6,11 @@ set(CMAKE_CXX_STANDARD 11)
 include(CTest)
 
 find_package(Catch2 REQUIRED)
-find_package(Boost 1.69.0)
+find_package(Boost 1.68 REQUIRED)
 
 add_subdirectory(src)
 add_subdirectory(test)
 
 add_executable(Runner main.cpp)
 
-target_link_libraries(Runner src/${PROJECT_NAME})
+target_include_directories(Runner PUBLIC ${CMAKE_SOURCE_DIR}/src)
